@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Layout</title>
+    <style>
+        body {
+            padding: 2em;
+        }
+
+        .headerContainer {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: tomato;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .footerContainer {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: rgb(9, 177, 23);
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .mainContainer {
+            display: flex;
+            flex-flow: row wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .mainContentItem {
+            text-align: left;
+            background: deepskyblue;
+        }
+
+        article {
+            padding: 10px;
+            margin: 10px;
+            background: aqua;
+        }
+
+        .sideBarLeftItem {
+            background: gold;
+        }
+
+        .sideBarRightItem {
+            background: hotpink;
+        }
+
+        .sideBarItem {
+            flex: 1 0 0;
+            border: 0px solid green;
+        }
+
+        .mainContentItem {
+            flex: 3 0px
+        }
+
+        .sideBarLeftItem {
+            order: 1;
+        }
+
+        .mainContentItem {
+            order: 2;
+        }
+
+        .sideBarRightItem {
+            order: 3;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="headerContainer">
+        <h1>HEADER Example</h1>
+    </header>
+    <div class="mainContainer">
+        <section class="mainContentItem">
+            <article>
+                <h2>First Line</h2>
+                <p>This is first line</p>
+            </article>
+            <article>
+                <h2>Second Line</h2>
+                <p>This is second line</p>
+            </article>
+            <article>
+                <h2>Third line</h2>
+                <p>This is third line</p>
+            </article>
+        </section>
+        <sideBar class="sideBarIte sideBarLeftItem">
+            <div class="center">
+                <p>Left Side bar</p>
+            </div>
+        </sideBar>
+        <sideBar class="sideBarIte sideBarRightItem">
+            <div class="center">
+                <p>Right Side bar</p>
+            </div>
+        </sideBar>
+    </div>
+    <footer class="footerContainer">Footer</footer>
+</body>
+
+</html>
